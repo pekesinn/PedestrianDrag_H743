@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Copy scaffold into CubeMX project (PowerShell)",
+      "type": "shell",
+      "command": "powershell",
+      "args": ["-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\tools\\create_scaffold.ps1", "-Target", "${input:targetPath}"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Copy scaffold into CubeMX project (bash)",
+      "type": "shell",
+      "command": "bash",
+      "args": ["${workspaceFolder}/tools/create_scaffold.sh", "${input:targetPath}"],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "targetPath",
+      "type": "promptString",
+      "description": "Path to your CubeMX-generated Keil project root (folder containing Core/, Drivers/, Middlewares/)",
+      "default": "."
+    }
+  ]
+}

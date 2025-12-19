@@ -1,0 +1,21 @@
+# Keil
+*.bak
+*.dep
+*.crf
+*.o
+*.d
+*.axf
+*.lst
+*.map
+*.htm
+*.lnp
+*.uvoptx
+*.uvopt
+*.scvd
+
+# Build output
+Objects/
+Listings/
+
+# CubeMX temp
+.mxproject
